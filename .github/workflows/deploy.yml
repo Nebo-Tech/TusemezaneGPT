@@ -25,4 +25,4 @@ jobs:
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         FTP_TARGET_DIR: ${{ secrets.FTP_TARGET_DIR }}
       run: |
-      lftp -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER -e "set ftp:passive-mode on; set ssl:verify-certificate no; mirror -R ./ $FTP_TARGET_DIR; quit"
+        lftp -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER -e "set ftp:passive-mode on; set ssl:verify-certificate no; mirror -R ./ $FTP_TARGET_DIR; quit"
