@@ -58,7 +58,8 @@ body {
   }
   
   .message.user .message-text {
-    background-color: #00873c;
+    /* background-color: #00873c; */
+    background-color: aqua;
     color: #fff;
   }
   
