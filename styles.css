@@ -1,9 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f9f9f9;
     color: #333;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
   }
   
   header {
@@ -18,18 +25,28 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
   }
+
+  main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    padding: 1rem;
+  }
   
   .chat-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
+    height: 82vh;
+    width: 90%;
     max-width: 600px;
     margin: 60px auto 0; /* Account for the fixed header */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
+    position: relative;
   }
   
   .messages {
@@ -58,10 +75,7 @@ body {
   }
   
   .message.user .message-text {
-    /* background-color: #00873c; */
-    /* background-color: aqua; */
-    /* background-color: brown; */
-    background-color: chartreuse;
+    background-color: #00873c;
     color: #fff;
   }
   
@@ -73,10 +87,10 @@ body {
   .input-container {
     display: flex;
     padding: 10px;
+    width: 100%;
     background-color: #f9f9f9;
     border-top: 1px solid #ddd;
     position: sticky;
-    outline: 1px solid red; /* Visual debug */
     bottom: 0;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
   }
